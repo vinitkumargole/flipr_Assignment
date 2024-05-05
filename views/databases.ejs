@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Databases</title>
+</head>
+<body>
+    <h1>List of Databases</h1>
+    <ul>
+        <% databases.forEach(database => { %>
+            <li><%= database.name %></li>
+        <% }) %>
+    </ul>
+    <form action="/add-database" method="POST">
+        <input type="text" name="name" placeholder="New Database Name" required>
+        <button type="submit">Add Database</button>
+    </form>
+    <form action="/remove-database" method="POST">
+        <input type="text" name="databaseId" placeholder="Database ID to Remove" required>
+        <button type="submit">Remove Database</button>
+    </form>
+</body>
+</html>
