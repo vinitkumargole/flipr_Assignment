@@ -4,7 +4,7 @@ const state={
 }
 
 module.exports.connect=function(done){
-    const url='mongodb+srv://vinitkumar20049:ppgL53MsS869YkLj@flipr.a2idthg.mongodb.net/'
+    const url='MONGO_URL'
     const dbname='flipr'
 
     mongoClient.connect(url,(err,data)=>{
